@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //permite acessar os arquivos fisicos gravados na pasta tmp
-app.use("files", express.static(path.resolve(__dirname, "..", "tmp")));
+app.use("/files", express.static(path.resolve(__dirname, "..", "tmp")));
 
 app.use(require('./routes'));
 
